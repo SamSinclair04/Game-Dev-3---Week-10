@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameDevWithMarco.Packages;
 
-public class scp_Shredder : MonoBehaviour
+namespace GameDevWithMarco.Packages
 {
-    /// <summary>
-    /// Just destroys anything that enters in the trigger
-    /// </summary>
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class scp_Shredder : MonoBehaviour
     {
-        Destroy(collision.gameObject);
+        /// <summary>
+        /// Just destroys anything that enters in the trigger
+        /// </summary>
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

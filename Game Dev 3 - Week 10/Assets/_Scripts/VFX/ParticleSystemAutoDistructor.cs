@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameDevWithMarco.VFX;
 
-public class ParticleSystemAutoDistructor : MonoBehaviour
+namespace GameDevWithMarco.VFX
 {
-    private ParticleSystem system;
-
-    
-    // Update is called once per frame
-    void Update()
+    public class ParticleSystemAutoDistructor : MonoBehaviour
     {
-        if (system == null)
-        {
-            system = GetComponent<ParticleSystem>();
-        }
+        private ParticleSystem system;
 
-        if (system != null && !system.IsAlive(true))
+
+        // Update is called once per frame
+        void Update()
         {
-            Destroy(gameObject);
+            if (system == null)
+            {
+                system = GetComponent<ParticleSystem>();
+            }
+
+            if (system != null && !system.IsAlive(true))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
