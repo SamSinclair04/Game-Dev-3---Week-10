@@ -105,6 +105,10 @@ namespace GameDevWithMarco.Managers
                 gameOver.Raise();
             }
         }
+        public void LifePackLogic()
+        {
+            lives++;
+        }
 
         public void RestartGame()
         {
